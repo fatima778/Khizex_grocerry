@@ -5,7 +5,7 @@ export interface PricingBreakdown {
   total: number;
 }
 
-const TAX_RATE = 0.05; // 5% tax
+const TAX_RATE = 0.05;
 const DELIVERY_FEE = 3.99;
 
 export function calculatePricing(subtotal: number): PricingBreakdown {

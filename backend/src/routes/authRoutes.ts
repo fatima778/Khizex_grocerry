@@ -1,6 +1,6 @@
 import { Router } from "express";
 import rateLimit from "express-rate-limit";
-import { signup, login, refresh, logout } from "../controllers/authControllers";
+import { signup, login, refresh, logout } from "../controllers/authController";
 import { validate } from "../middleware/validate";
 import { signupSchema, loginSchema } from "../utils/validators";
 import { asyncHandler } from "../utils/asyncHandler";

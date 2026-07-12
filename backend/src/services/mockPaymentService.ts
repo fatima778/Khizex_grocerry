@@ -11,12 +11,9 @@ interface PaymentResult {
   message: string;
 }
 
-// Simulates a payment gateway (Stripe/PayPal equivalent) in test mode.
-// Never stores raw card data — only validates format and discards it.
 export function processMockPayment(input: PaymentInput): PaymentResult {
   const paymentId = `mock_pay_${crypto.randomBytes(12).toString("hex")}`;
 
-  // Simulate a "declined card" test scenario, similar to Stripe's 4000000000000002
   if (input.cardNumber.replace(/\s/g, "") === "4000000000000002") {
     return {
       success: false,
@@ -25,7 +22,6 @@ export function processMockPayment(input: PaymentInput): PaymentResult {
     };
   }
 
-  // Any other 16-digit test card number simulates success
   return {
     success: true,
     paymentId,

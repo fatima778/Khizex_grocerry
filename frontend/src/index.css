@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  /* ---- Khizex palette: sage field + forest + coral + mustard ---- */
+  --color-field-50: #F4F7EE;
+  --color-field-100: #E8EEDC;
+  --color-forest-600: #2C5233;
+  --color-forest-700: #1F3D26;
+  --color-forest-900: #12241A;
+  --color-leaf-400: #6CB259;
+  --color-leaf-500: #4C9A2A;
+  --color-leaf-600: #3D7E22;
+  --color-coral-400: #FF8A6B;
+  --color-coral-500: #FF6B4A;
+  --color-coral-600: #E8502F;
+  --color-mustard-400: #FFC93C;
+  --color-mustard-500: #F5B301;
+  --color-ink-900: #1B2318;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Plus Jakarta Sans", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-field-50);
+  color: var(--color-ink-900);
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* Infinite marquee */
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee-scroll 28s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Soft floating blob */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-18px) rotate(4deg); }
+}
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+@keyframes float-slower {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(14px) rotate(-3deg); }
+}
+.animate-float-slower {
+  animation: float-slower 8s ease-in-out infinite;
+}
+
+/* Custom scrollbar for category rails */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

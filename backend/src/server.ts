@@ -11,6 +11,8 @@ import productRoutes from "./routes/productRoutes";
 import cartRoutes from "./routes/cartRoutes";
 import checkoutRoutes from "./routes/checkoutRoutes";
 import orderRoutes from "./routes/orderRoutes";
+import userRoutes from "./routes/userRoutes";
+import complaintRoutes from "./routes/complaintRoutes";
 import { initSocket } from "./services/socketService";
 
 dotenv.config();
@@ -46,6 +48,8 @@ app.use("/api/products", productRoutes);
 app.use("/api/cart", cartRoutes);
 app.use("/api/checkout", checkoutRoutes);
 app.use("/api/orders", orderRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/complaints", complaintRoutes);
 
 app.use((_req: Request, res: Response) => {
   res.status(404).json({ message: "Route not found" });

@@ -21,3 +21,11 @@ export function emitNewOrder(order: unknown): void {
 export function emitOrderStatusUpdate(orderId: string, status: string, userId: string): void {
   io?.emit("order:status", { orderId, status, userId });
 }
+
+export function emitNewComplaint(complaint: unknown): void {
+  io?.emit("complaint:new", complaint);
+}
+
+export function emitComplaintReply(complaintId: string, message: unknown, targetUserId: string): void {
+  io?.emit("complaint:reply", { complaintId, message, targetUserId });
+}
