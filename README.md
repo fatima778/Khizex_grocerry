@@ -3,9 +3,9 @@
 A production-style grocery e-commerce platform built for the Khizex Full-Stack Internship assignment — React + TypeScript storefront/admin dashboard, Express + TypeScript API, MongoDB Atlas, real-time Socket.IO sync, and concurrency-safe checkout.
 
 ## Live Links
-- **Live app:** _add your deployed frontend URL here after deployment_
-- **API:** _add your deployed backend URL here after deployment_
-- **Repository:** _this repo_
+- **Live app:** https://khizex-grocerry-tvbg.vercel.app
+- **API:** https://khizex-grocerry.onrender.com
+- **Repository:** https://github.com/fatima778/Khizex_grocerry
 
 ## Tech Stack
 - **Frontend:** React, TypeScript, Vite, Tailwind CSS v4, Framer Motion, React Three Fiber, Zustand, Socket.IO client
@@ -14,7 +14,9 @@ A production-style grocery e-commerce platform built for the Khizex Full-Stack I
 
 ## Project Structure
 khizex_grocery/
+
 ├── backend/     — Express API, MongoDB models, real-time server, seed scripts
+
 └── frontend/    — React storefront + admin dashboard
 
 ## Setup Instructions
