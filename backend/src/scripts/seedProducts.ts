@@ -13,6 +13,7 @@ interface SeedProduct {
   category: string;
   stock: number;
   lowStockThreshold: number;
+  images?: string[];
 }
 
 const PRODUCTS: SeedProduct[] = [
